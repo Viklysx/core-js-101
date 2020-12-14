@@ -27,8 +27,17 @@
  *  21 => 'Fizz'
  *
  */
-function getFizzBuzz(/* num */) {
-  throw new Error('Not implemented');
+function getFizzBuzz(n) {
+  if (n % 3 === 0 && n % 5 === 0) {
+    return 'FizzBuzz';
+  }
+  if (n % 3 === 0) {
+    return 'Fizz';
+  }
+  if (n % 5 === 0) {
+    return 'Buzz';
+  }
+  return n;
 }
 
 
@@ -225,8 +234,8 @@ function reverseString(/* str */) {
  *   87354 => 45378
  *   34143 => 34143
  */
-function reverseInteger(/* num */) {
-  throw new Error('Not implemented');
+function reverseInteger(num) {
+  return String(num).split('').reverse().join('');
 }
 
 
